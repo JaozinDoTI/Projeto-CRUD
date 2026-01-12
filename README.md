@@ -10,12 +10,6 @@
 
 ---
 
-## 🖼️ Preview
-
-*(Aqui você pode colocar um print da tela de login depois. Basta arrastar a imagem para a issue do github ou criar uma pasta 'screenshots')*
-
----
-
 ## 🚀 Funcionalidades
 
 - **Autenticação Completa:** Login, Registro e "Logout".
