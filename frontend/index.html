@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System | Secure CRUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="login-screen" class="card active">
+            <h2><i class="fas fa-shield-alt"></i> Acesso Seguro</h2>
+            <p class="subtitle">Faça login para acessar o sistema</p>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="login-email" required placeholder="seu@email.com" autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <label for="login-pass">Senha</label>
+                    <input type="password" id="login-pass" required placeholder="••••••••" autocomplete="current-password">
+                </div>
+
+                <div class="captcha-group">
+                    <span id="captcha-question">Wait...</span>
+                    <input type="number" id="captcha-input" placeholder="Resultado?" required>
+                </div>
+
+                <div id="login-error" class="error-msg"></div>
+
+                <button type="submit" id="btn-login" class="btn-primary">Entrar</button>
+            </form>
+            
+            <p class="footer-text">Não tem conta? <a href="#" id="link-register">Registre-se</a></p>
+        </div>
+
+        <div id="register-screen" class="card hidden">
+            <h2>Criar Conta</h2>
+            <p class="subtitle">Preencha seus dados com segurança</p>
+
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="reg-name">Nome Completo</label>
+                    <input type="text" id="reg-name" required placeholder="Nome">
+                </div>
+                <div class="input-group">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email" required placeholder="seu@email.com">
+                </div>
+                <div class="input-group">
+                    <label for="reg-pass">Senha</label>
+                    <input type="password" id="reg-pass" required placeholder="Mínimo 8 caracteres, símbolos...">
+                    <small class="hint">Use letras, números e símbolos.</small>
+                </div>
+
+                <div id="reg-error" class="error-msg"></div>
+
+                <button type="submit" class="btn-primary">Registrar</button>
+            </form>
+            <p class="footer-text">Já tem conta? <a href="#" id="link-login">Faça Login</a></p>
+        </div>
+
+        <div id="verify-screen" class="card hidden">
+            <h2>Verifique seu E-mail</h2>
+            <p>Enviamos um código para o seu e-mail (Simulado: 1234)</p>
+            <input type="text" id="verify-code" placeholder="Código de 4 dígitos">
+            <button id="btn-verify" class="btn-primary">Confirmar</button>
+        </div>
+
+        <div id="dashboard-screen" class="card hidden wide">
+            <div class="dash-header">
+                <h2>Painel de Controle</h2>
+                <button id="btn-logout" class="btn-outline">Sair</button>
+            </div>
+            <p>Bem-vindo, <span id="user-display-name"></span>.</p>
+            <div class="crud-placeholder">
+                <p>Módulo CRUD desbloqueado com sucesso.</p>
+                </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
